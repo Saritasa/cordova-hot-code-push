@@ -245,7 +245,7 @@ public class HotCodePushPlugin extends CordovaPlugin {
      * @return
      */
     private int versionToCode(String versionTitle) {
-        final String[] versionParts = versionTitle.split("\\.");
+        final String[] versionParts = versionTitle.split("[.-]");
         final int multiplierStep = 100;
         int multiplier = ((int) Math.pow(multiplierStep, (versionParts.length - 1)));
         int versionCode = 0;
